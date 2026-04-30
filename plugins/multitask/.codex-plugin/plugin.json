@@ -1,0 +1,32 @@
+{
+  "name": "multitask",
+  "version": "0.1.7",
+  "description": "Split one prompt into parallel Codex workers with file ownership.",
+  "author": { "name": "codex-multitask contributors", "url": "https://github.com/nikuscs" },
+  "homepage": "https://github.com/nikuscs/codex-multitask",
+  "repository": "https://github.com/nikuscs/codex-multitask",
+  "license": "MIT",
+  "keywords": ["codex", "parallel", "multitask", "agents"],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Multitask",
+    "shortDescription": "Run parallel Codex workers",
+    "longDescription": "Run the Multitask companion directly to plan and execute parallel Codex workers. Keep responses concise; do not inspect plugin internals unless debugging the plugin.",
+    "developerName": "codex-multitask contributors",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/nikuscs/codex-multitask",
+    "privacyPolicyURL": "https://github.com/nikuscs/codex-multitask/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/nikuscs/codex-multitask/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "Run Multitask setup",
+      "Run this with Multitask",
+      "Run read-only repo orientation"
+    ],
+    "brandColor": "#2563EB",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": ["./assets/screenshot-1.svg"]
+  }
+}

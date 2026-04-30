@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/plugins/multitask/scripts/session-lifecycle-hook.mjs\" SessionStart",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/plugins/multitask/scripts/session-lifecycle-hook.mjs\" SessionEnd",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

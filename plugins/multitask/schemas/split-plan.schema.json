@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "workers"],
+  "properties": {
+    "summary": { "type": "string" },
+    "workers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "prompt",
+          "owned_files",
+          "read_only_files",
+          "depends_on",
+          "model",
+          "effort",
+          "sandbox"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "prompt": { "type": "string" },
+          "owned_files": { "type": "array", "items": { "type": "string" } },
+          "read_only_files": { "type": "array", "items": { "type": "string" } },
+          "depends_on": { "type": "array", "items": { "type": "string" } },
+          "model": { "type": ["string", "null"] },
+          "effort": { "type": ["string", "null"], "enum": ["low", "medium", "high", null] },
+          "sandbox": {
+            "type": ["string", "null"],
+            "enum": ["read-only", "workspace-write", "danger-full-access", null]
+          }
+        }
+      }
+    }
+  }
+}

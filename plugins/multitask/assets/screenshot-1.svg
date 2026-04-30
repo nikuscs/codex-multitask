@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Multitask plugin screenshot</title>
+  <desc id="desc">The Multitask plugin showing a foreground parallel worker run.</desc>
+  <rect width="1440" height="900" fill="#0f172a"/>
+  <rect x="96" y="84" width="1248" height="732" rx="28" fill="#020617" stroke="#1d4ed8"/>
+  <text x="150" y="158" font-family="Inter, ui-sans-serif, system-ui" font-size="44" font-weight="800" fill="#f8fafc">Multitask Run</text>
+  <text x="150" y="206" font-family="Inter, ui-sans-serif, system-ui" font-size="22" fill="#93c5fd">Run one splitter, then fan out Codex workers with owned files.</text>
+  <rect x="150" y="270" width="1140" height="84" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="182" y="323" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" fill="#dbeafe">codex-multitask run --workers 4 --isolated-workspaces "implement auth changes"</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22">
+    <rect x="150" y="410" width="1140" height="70" rx="14" fill="#0f172a"/>
+    <text x="184" y="455" fill="#60a5fa">W1</text><text x="250" y="455" fill="#f8fafc">auth core</text><text x="520" y="455" fill="#bbf7d0">ok</text><text x="660" y="455" fill="#94a3b8">14.2s</text><text x="820" y="455" fill="#94a3b8">62k in / 0.2k out</text>
+    <rect x="150" y="500" width="1140" height="70" rx="14" fill="#0f172a"/>
+    <text x="184" y="545" fill="#60a5fa">W2</text><text x="250" y="545" fill="#f8fafc">api routes</text><text x="520" y="545" fill="#bbf7d0">ok</text><text x="660" y="545" fill="#94a3b8">11.8s</text><text x="820" y="545" fill="#94a3b8">59k in / 0.2k out</text>
+    <rect x="150" y="590" width="1140" height="70" rx="14" fill="#0f172a"/>
+    <text x="184" y="635" fill="#60a5fa">W3</text><text x="250" y="635" fill="#f8fafc">tests</text><text x="520" y="635" fill="#fde68a">partial</text><text x="660" y="635" fill="#94a3b8">18.4s</text><text x="820" y="635" fill="#94a3b8">focused test blocked</text>
+    <rect x="150" y="680" width="1140" height="70" rx="14" fill="#0f172a"/>
+    <text x="184" y="725" fill="#60a5fa">W4</text><text x="250" y="725" fill="#f8fafc">docs</text><text x="520" y="725" fill="#bbf7d0">ok</text><text x="660" y="725" fill="#94a3b8">8.7s</text><text x="820" y="725" fill="#94a3b8">patch applied --3way</text>
+  </g>
+</svg>

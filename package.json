@@ -1,0 +1,38 @@
+{
+  "name": "codex-multitask",
+  "version": "0.1.7",
+  "private": true,
+  "description": "Run parallel Codex workers from one planned task.",
+  "license": "MIT",
+  "bin": {
+    "codex-multitask": "./bin/codex-multitask.mjs",
+    "multitask": "./bin/codex-multitask.mjs"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/runtime.test.mjs",
+    "lint": "oxlint --deny-warnings --node-plugin .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "check": "bun run lint && bun run format:check && bun run test",
+    "build:cli:darwin-arm64": "bun build bin/codex-multitask.mjs --compile --target=bun-darwin-arm64 --outfile dist/codex-multitask-darwin-arm64",
+    "build:cli:darwin-x64": "bun build bin/codex-multitask.mjs --compile --target=bun-darwin-x64 --outfile dist/codex-multitask-darwin-x64",
+    "build:cli:linux-arm64": "bun build bin/codex-multitask.mjs --compile --target=bun-linux-arm64 --outfile dist/codex-multitask-linux-arm64",
+    "build:cli:linux-x64": "bun build bin/codex-multitask.mjs --compile --target=bun-linux-x64 --outfile dist/codex-multitask-linux-x64",
+    "build:cli:windows-x64": "bun build bin/codex-multitask.mjs --compile --target=bun-windows-x64 --outfile dist/codex-multitask-windows-x64.exe",
+    "build:cli": "mkdir -p dist && bun run build:cli:darwin-arm64 && bun run build:cli:darwin-x64 && bun run build:cli:linux-arm64 && bun run build:cli:linux-x64 && bun run build:cli:windows-x64",
+    "release:dry-run": "bun run check && bun run build:cli",
+    "release:patch": "bun run check && npm version patch -m \"release: v%s\" && git push --follow-tags",
+    "release:minor": "bun run check && npm version minor -m \"release: v%s\" && git push --follow-tags",
+    "release:major": "bun run check && npm version major -m \"release: v%s\" && git push --follow-tags"
+  },
+  "devDependencies": {
+    "bumpp": "^10.2.3",
+    "oxfmt": "0.45.0",
+    "oxlint": "1.60.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "bun@1.2.22"
+}
