@@ -207,12 +207,6 @@ That runs:
 - `oxfmt --check`
 - `node --test tests/runtime.test.mjs`
 
-## Current Status
-
-This repository implements the planned plugin shape from `final_plan.md`: split, validate, fan-out, retry, model fallback, status/result/cancel, shared audit, isolated workspaces, patch application, release packaging, plugin assets, legal docs, and sibling-style README/skill docs.
-
-The remaining work before public release is real-world smoke testing with live `codex exec` across default shared mode and `--isolated-workspaces` in a non-trivial repository.
-
 ## Credits
 
 - Sibling implementation: [nikuscs/codex-cc-plugin](https://github.com/nikuscs/codex-cc-plugin)
